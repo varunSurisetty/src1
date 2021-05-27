@@ -1,6 +1,6 @@
 
 
-package devops.ilp1;
+package devops.cap;
 public interface IntegrationTest {
 
 }

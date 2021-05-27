@@ -1,4 +1,4 @@
-package devops.ilp1.model;
+package devops.cap.model;
 
 public class User {
 	

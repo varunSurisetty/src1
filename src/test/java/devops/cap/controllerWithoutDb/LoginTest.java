@@ -1,4 +1,4 @@
-package devops.ilp1.controllerWithoutDb;
+package devops.cap.controllerWithoutDb;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import java.io.*;
@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import devops.ilp1.controllerWithoutDb.UserLoginController;
+import devops.cap.controllerWithoutDb.UserLoginController;
 
 
 public class LoginTest extends Mockito{

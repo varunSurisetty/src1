@@ -1,11 +1,11 @@
-package devops.ilp1.service;
+package devops.cap.service;
 
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import devops.ilp1.db.UserDb;
-import devops.ilp1.model.User;
+import devops.cap.db.UserDb;
+import devops.cap.model.User;
 
 public class UserService {
 	UserDb userDb;

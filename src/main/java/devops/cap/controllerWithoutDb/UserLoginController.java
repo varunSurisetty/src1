@@ -1,4 +1,4 @@
-package devops.ilp1.controllerWithoutDb;
+package devops.cap.controllerWithoutDb;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import devops.ilp1.model.User;
-import devops.ilp1.service.UserService;
+import devops.cap.model.User;
+import devops.cap.service.UserService;
 
 public class UserLoginController extends HttpServlet {
 	

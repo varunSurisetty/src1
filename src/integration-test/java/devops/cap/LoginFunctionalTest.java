@@ -1,4 +1,4 @@
-package devops.ilp1;
+package devops.cap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import devops.ilp1.IntegrationTest;
+import devops.cap.IntegrationTest;
 
 import org.junit.*;
 import static org.junit.Assert.*;
