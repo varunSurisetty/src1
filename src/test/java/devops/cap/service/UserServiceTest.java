@@ -25,5 +25,15 @@ public class UserServiceTest {
 		User u1=new User("RAM","RAJ","1234","raj@devops.com");
 		assertEquals(true,new UserService().doRegistration(u1));
 	}
+@Test
+public void testtoString() {
+		User u1=new User("RAM","RAJ","1234","raj@devops.com");
+		//assertNull(u1,new User().toString());
+	}
+@Test
+public void testUser() {
+		User u1=new User("RAM","RAJ","1234","raj@devops.com");
+		//assertNull(null,new User());
+	}
 
 }

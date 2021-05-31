@@ -45,5 +45,5 @@ public class ChangePasswordTest extends Mockito{
         assertEquals("password updated", result);
       
     }
-   
+    
 }
