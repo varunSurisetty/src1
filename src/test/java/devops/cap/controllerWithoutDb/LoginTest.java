@@ -44,10 +44,11 @@ public class LoginTest extends Mockito{
       
     }
     
-    //@Test
+  
+ @Test
     public void testLoginFail() throws Exception {
-        when(request.getParameter("email")).thenReturn("a.p@devops.com");
-        when(request.getParameter("password")).thenReturn("12345");
+        when(request.getParameter("email")).thenReturn("a@devops.com");
+        when(request.getParameter("password")).thenReturn("1234");
         when(request.getRequestDispatcher("/fail.jsp")).thenReturn(rd);            
         StringWriter stringWriter = new StringWriter();
         PrintWriter writer = new PrintWriter(stringWriter);

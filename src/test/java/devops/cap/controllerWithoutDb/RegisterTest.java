@@ -30,7 +30,7 @@ public class RegisterTest extends Mockito{
 
 
   
-     @Test
+    @Test
     public void testRegistrationSuccess() throws Exception {
     	when(request.getParameter("firstname")).thenReturn("fname");
     	when(request.getParameter("lastname")).thenReturn("lname");
@@ -49,6 +49,7 @@ public class RegisterTest extends Mockito{
         assertEquals("Successfuly registered...", result);
       
     }
+    
     @Test
     public void testRegistrationFail() throws Exception {
     	when(request.getParameter("firstname")).thenReturn("fname");

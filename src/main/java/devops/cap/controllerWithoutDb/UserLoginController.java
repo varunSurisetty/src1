@@ -25,7 +25,7 @@ public class UserLoginController extends HttpServlet {
 		String email=request.getParameter("email");
 		String pass=request.getParameter("password");
 		
-		if (email.isEmpty() || pass.isEmpty()) {
+		if ((email != null && email.isEmpty()) || (pass!=null && pass.isEmpty())) {
 			  RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			   out.println("<font color=red>Please fill all the fields</font>");
 			   rd.include(request, response);
