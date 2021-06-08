@@ -68,4 +68,5 @@ public class RegisterTest extends Mockito{
         String result = stringWriter.getBuffer().toString().trim();
         assertEquals("<font color=red>Password and Confirm Password doen't matches</font>", result);
     }
+ 
 }

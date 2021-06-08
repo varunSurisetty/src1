@@ -60,7 +60,7 @@ public class UserService {
 		if(user!=null && user.getEmail()!=null){			
 			userDb.userProfile.put(user.getEmail(), user);
 			isCreated=true;		
-			System.out.println("Number of records available: "+userDb.userProfile.size());
+			//System.out.println("Number of records available: "+userDb.userProfile.size());
 		}
 		return isCreated;
 	}

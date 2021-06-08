@@ -27,16 +27,17 @@ public class UserLoginController extends HttpServlet {
 		
 		if ((email != null && email.isEmpty()) || (pass!=null && pass.isEmpty())) {
 			  RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-			   out.println("<font color=red>Please fill all the fields</font>");
-			   rd.include(request, response);
-			  } else {
+			 // out.println("<font color=red>Please fill all the fields</font>");
+			  rd.include(request, response);
+			 } 
+			else {
 				
 				  User signUp=new User("","",pass,email);
 
 					PrintWriter pout= response.getWriter();
 					if (new UserService().isAuthorized(signUp)) {
 						pout.write("Login successfull...");
-						RequestDispatcher rd = request.getRequestDispatcher("/success.jsp");
+                                       RequestDispatcher rd=request.getRequestDispatcher("success.jsp");
 						rd.forward(request,response);
 						return;
 					}

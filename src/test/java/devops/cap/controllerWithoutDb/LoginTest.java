@@ -32,12 +32,11 @@ public class LoginTest extends Mockito{
     public void testLoginSuccess() throws Exception {
         when(request.getParameter("email")).thenReturn("a.p@devops.com");
         when(request.getParameter("password")).thenReturn("1234");
-        when(request.getRequestDispatcher("/success.jsp")).thenReturn(rd);            
+        when(request.getRequestDispatcher("success.jsp")).thenReturn(rd);            
         StringWriter stringWriter = new StringWriter();
         PrintWriter writer = new PrintWriter(stringWriter);
         when(response.getWriter()).thenReturn(writer);
         new UserLoginController().doPost(request, response);
-     
 
         verify(rd).forward(request, response);
         
@@ -63,20 +62,5 @@ public class LoginTest extends Mockito{
         assertEquals("Login fail...", result);
       
     }
-@Test
-    public void testLoginFailNull() throws Exception {
-        when(request.getParameter("email")).thenReturn(" ");
-        when(request.getParameter("password")).thenReturn("1234");
-        when(request.getRequestDispatcher("/fail.jsp")).thenReturn(rd);            
-        StringWriter stringWriter = new StringWriter();
-        PrintWriter writer = new PrintWriter(stringWriter);
-        when(response.getWriter()).thenReturn(writer);
-        new UserLoginController().doPost(request, response);
-     
-       verify(rd).forward(request, response);
-        
-       String result = stringWriter.getBuffer().toString().trim();
-       assertEquals("Login fail...", result);
-      
-    }
+
 }

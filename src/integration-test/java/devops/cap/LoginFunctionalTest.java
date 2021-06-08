@@ -54,7 +54,17 @@ public class LoginFunctionalTest {
         button.click();
         assertTrue(driver.getPageSource().contains(" "));
 	}
-	
+	@Test
+	public void checkoutSuccess() {
+        driver.get("http://localhost:5050/giftshop");
+        WebElement email = driver.findElement(By.name("userName"));
+        WebElement pass = driver.findElement(By.name("password"));
+        WebElement button = driver.findElement(By.xpath("/html/body/form/div/button"));         
+        email.sendKeys("meera");
+        pass.sendKeys("meera");
+        button.click();
+        assertTrue(driver.getPageSource().contains(" "));
+	}
 	@Test
 	public void loginFail() {
         driver.get("http://localhost:5050/giftshop");
