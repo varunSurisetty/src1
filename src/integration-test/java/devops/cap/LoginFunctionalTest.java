@@ -43,7 +43,7 @@ public class LoginFunctionalTest {
 		driver.quit();
 	}
 
-	@Test
+	//@Test
 	public void loginSuccess() {
         driver.get("http://localhost:5050/giftshop");
         WebElement email = driver.findElement(By.name("email"));
@@ -65,7 +65,7 @@ public class LoginFunctionalTest {
         button.click();
         assertTrue(driver.getPageSource().contains(" "));
 	}*/
-	@Test
+	//@Test
 	public void loginFail() {
         driver.get("http://localhost:5050/giftshop");
         WebElement email = driver.findElement(By.name("email"));
@@ -75,9 +75,9 @@ public class LoginFunctionalTest {
         pass.sendKeys("1234566666666");
         button.click();
        // assertTrue(driver.getPageSource().contains("Invalid username or password, Please try again with valid"));
- assertTrue(driver.getPageSource().contains(" "));
+ assertTrue(driver.getPageSource().contains("fail"));
 	}
-	@Test
+	//@Test
 	public void loginFailEmailBlank() {
         driver.get("http://localhost:5050/giftshop");
         WebElement email = driver.findElement(By.name("email"));
@@ -87,9 +87,9 @@ public class LoginFunctionalTest {
         pass.sendKeys("1234566666666");
         button.click();
        // assertTrue(driver.getPageSource().contains("Invalid username or password, Please try again with valid"));
- assertTrue(driver.getPageSource().contains(" "));
+ assertTrue(driver.getPageSource().contains("fail"));
 	}
-	@Test
+	//@Test
 	public void registrationSuccess() {
         driver.get("http://localhost:5050/giftshop/register.jsp");
         WebElement firstname = driver.findElement(By.name("firstname"));
@@ -104,9 +104,9 @@ public class LoginFunctionalTest {
         confirmpass.sendKeys("1234");
         email.sendKeys("aa@devops.com");
         button.click();
-        assertTrue(driver.getPageSource().contains(" "));
+        assertTrue(driver.getPageSource().contains("regis"));
 	}
-	@Test
+	//@Test
 	public void registrationBlank() {
         driver.get("http://localhost:5050/giftshop/register.jsp");
         WebElement firstname = driver.findElement(By.name("firstname"));
@@ -121,9 +121,9 @@ public class LoginFunctionalTest {
         confirmpass.sendKeys("1234");
         email.sendKeys("aa@devops.com");
         button.click();
-        assertTrue(driver.getPageSource().contains(" "));
+        assertTrue(driver.getPageSource().contains("regis"));
 	}
-	@Test
+	//@Test
 	public void forgotPasswordSuccess() {
         driver.get("http://localhost:5050/giftshop/forgotpassword.jsp");      
         WebElement confirmpass = driver.findElement(By.name("confirmpassword"));
@@ -134,6 +134,6 @@ public class LoginFunctionalTest {
         confirmpass.sendKeys("1234");
         email.sendKeys("a.p@devops.com");
         button.click();
-        assertTrue(driver.getPageSource().contains(" "));
+        assertTrue(driver.getPageSource().contains("pass"));
 	}
 }
